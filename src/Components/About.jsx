@@ -16,44 +16,35 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/paper-1074131_1920.jpg";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "Texture of paper, because I love the small of paper!";
 
 /**
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm a DS&AI student at the University Of Petra. I have a passion for learning and challenging my capabilities, as I believe this is the only true way to master concepts.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
-const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
-];
+const skillsList = ["Data Analysis", "Supervised Machine Learning", "Statistical Analysis"];
 
 /**
  * Use this to give more information about what you are passionate about,
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
  */
-const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
-
+const detailOrQuote = "No One Knows What The Outcome Will Be. So, Choose Whatever You'll Regret The Least.";
 const About = () => {
   return (
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          backgroundColor: "white",
+          backgroundColor: "#7A2816",
           width: "50%",
           padding: "4rem",
           margin: "3rem auto",
@@ -61,26 +52,40 @@ const About = () => {
         }}
       >
         <h2>About Myself</h2>
-        <p className="large">{description}</p>
+        <p className="large" style={{ fontSize: '2em' }}>{description}</p>
         <hr />
         <ul
           style={{
             textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <li key={skill} style={{ fontSize: "2em" }}>{skill}</li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+      </div>
+      <div id="quote">
+        <div
+          style={{
+            backgroundColor: "#7A2816",
+            width: "50%",
+            padding: "4rem",
+            margin: "3rem auto",
+            textAlign: "center",
+          }}
+        >
+          <blockquote>
+            <span style={{ fontSize: '4em', lineHeight:'1.2', display: 'block' }}>
+              <span style={{ fontSize: '3em' }}>&ldquo;</span>
+              {detailOrQuote}
+              <span style={{ fontSize: '3em', marginLeft:'0.2em' }}>&rdquo;</span>
+            </span>
+          </blockquote>
+        </div>
       </div>
     </section>
   );
-};
+}
 
 export default About;
