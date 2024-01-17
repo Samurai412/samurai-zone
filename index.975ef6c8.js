@@ -27286,7 +27286,7 @@ const About = ()=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             style: {
                                 fontSize: "4em",
-                                lineHeight: "1.2",
+                                lineHeight: "1em",
                                 display: "block"
                             },
                             children: [
